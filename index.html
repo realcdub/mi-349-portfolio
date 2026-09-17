@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Charles White's portfolio site">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Charles White's portfolio site">
 
-    <title>Charles White</title>
-</head>
+        <title>Charles White</title>
 
-<body>
-    <h1>MI 349</h1>
-    <h2>Charles White</h2>
-</body>
+        <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+        <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
 
+        <style>
+            h1, h2 {
+                all: revert;
+            }
+
+            #dos {
+                margin: 0 auto;
+                position: relative;
+                width: 600px;
+                height: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>MI 349</h1>
+        <h2>Charles White</h2> 
+        <div id="dos"></div>  
+    </body>
+
+    <script>
+        const emu = Dos(document.getElementById("dos"), {
+            // Official pre-packaged fast-loading shareware Doom bundle
+            url: "./doom.jsdos",
+            emulator: "dosboxX", // Faster execution core with cleaner WASM cycles
+            autoStart: true,
+            kiosk: true,         // Removes bulky UI controls for maximum speed
+        });
+    </script>
 </html>
